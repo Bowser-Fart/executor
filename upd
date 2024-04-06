@@ -1,0 +1,13 @@
+a="awk 'BEGIN {srand()} {print rand()\"\t\"$0}' /usr/share/dict/words"
+b="|sort -k1,1n"
+c="|cut -f2-"
+d="|perl -e 'print join(\"\", sort { rand(1) <=> 0.5 } <>);'"
+e="|say"
+f="|sleep 10"
+g="while"
+h="done"
+
+eval "$g" "true;" "do"
+    CMD="$a$b$c$d$e$f"
+    eval "$CMD"
+eval "$h"
